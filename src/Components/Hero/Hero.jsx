@@ -139,7 +139,7 @@ export default function Hero() {
             to { transform: translateX(-50%); }
           }
           .animate-marquee-cards {
-            animation: marquee-cards 35s linear infinite;
+            animation: marquee-cards 80s linear infinite;
           }
         `}</style>
       </section>
