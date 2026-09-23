@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import socialmedia from "../../assets/ul.png";
 import CertoLogo from "../../assets/ul.png";
@@ -29,9 +30,19 @@ export default function Footer() {
             className="w-40 min-[769px]:w-64 cursor-pointer"
           />
 
-          <div className="flex gap-3 text-sm">
-            <p className="cursor-pointer underline">Privacy Policy</p>
-            <p className="cursor-pointer underline">Terms of Service</p>
+          <div className="flex gap-4 text-sm text-gray-300">
+            <Link
+              to="/privacy-policy"
+              className="cursor-pointer underline hover:text-[#FFC247] transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              to="/terms-of-service"
+              className="cursor-pointer underline hover:text-[#FFC247] transition-colors"
+            >
+              Terms of Service
+            </Link>
           </div>
           <div className="flex flex-col gap-4 text-xs text-gray-300">
             <p>
@@ -48,27 +59,50 @@ export default function Footer() {
         {/* 2nd div - Navigation Links */}
         <div className="flex flex-col">
           <div className="flex flex-col gap-12">
-            <div className="border-b-2 border-gray-600 max-w-28">
-              <h3 className="pb-4 font-bold text-xl">Certo</h3>
-            </div>
+            <Link to="/" className="border-b-2 border-gray-600 max-w-28 w-fit">
+              <h3 className="pb-4 font-bold text-xl cursor-pointer hover:text-[#FFC247] transition-colors">
+                Certo
+              </h3>
+            </Link>
           </div>
 
           <div className="flex flex-col gap-6 pt-8">
-            <p className="flex items-center gap-2 text-[#FFC247] cursor-pointer">
+            <Link
+              to="/"
+              className="flex items-center gap-2 text-[#FFC247] cursor-pointer hover:text-white transition-colors"
+            >
+              <Minus /> Home
+            </Link>
+            
+              <a href="/#get-app"
+              className="flex items-center gap-2 text-[#FFC247] cursor-pointer hover:text-white transition-colors"
+            >
               <Minus /> iPhone
-            </p>
-            <p className="flex items-center gap-2 text-[#FFC247] cursor-pointer">
+            </a>
+            
+             <a href="/#get-app"
+              className="flex items-center gap-2 text-[#FFC247] cursor-pointer hover:text-white transition-colors"
+            >
               <Minus /> Android
-            </p>
-            <p className="flex items-center gap-2 text-[#FFC247] cursor-pointer">
+            </a>
+            <Link
+              to="/help"
+              className="flex items-center gap-2 text-[#FFC247] cursor-pointer hover:text-white transition-colors"
+            >
               <Minus /> Help
-            </p>
-            <p className="flex items-center gap-2 text-[#FFC247] cursor-pointer">
+            </Link>
+            <Link
+              to="/about"
+              className="flex items-center gap-2 text-[#FFC247] cursor-pointer hover:text-white transition-colors"
+            >
               <Minus /> About
-            </p>
-            <p className="flex items-center gap-2 text-[#FFC247] cursor-pointer">
+            </Link>
+            <Link
+              to="/insights"
+              className="flex items-center gap-2 text-[#FFC247] cursor-pointer hover:text-white transition-colors"
+            >
               <Minus /> Insights
-            </p>
+            </Link>
           </div>
         </div>
 
@@ -136,3 +170,4 @@ export default function Footer() {
     </footer>
   );
 }
+

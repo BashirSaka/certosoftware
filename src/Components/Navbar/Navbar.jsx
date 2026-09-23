@@ -10,7 +10,7 @@ export default function Navbar() {
   const { user, isAuthenticated, logout } = useAuth();
 
   return (
-    <nav className="relative bg-[#F3F8FF] flex justify-between items-center py-4 px-6 min-[769px]:px-20">
+    <nav className="sticky top-0 z-50 bg-[#F3F8FF]/95 backdrop-blur-md shadow-xs border-b border-[#02033B]/5 flex justify-between items-center py-4 px-6 min-[769px]:px-20 transition-all">
       <Link to="/">
         <img
           src={Logo}
@@ -73,7 +73,7 @@ export default function Navbar() {
       </button>
 
       {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-[#F3F8FF] shadow-md flex flex-col gap-6 p-6 min-[769px]:hidden z-50">
+        <div className="absolute top-full left-0 w-full bg-[#F3F8FF] shadow-lg border-b border-gray-200/60 flex flex-col gap-6 p-6 min-[769px]:hidden z-50 max-h-[calc(100vh-70px)] overflow-y-auto">
           <ul className="flex flex-col gap-4 font-bold text-[#02033B]">
             <li>
               <a href="/#get-app" onClick={() => setIsOpen(false)}>
